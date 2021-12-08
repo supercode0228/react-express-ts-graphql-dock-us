@@ -1,0 +1,30 @@
+.container {
+  margin: auto;
+  padding: 2rem;
+  max-width: 1080px;
+}
+
+.header {
+  display: flex;
+}
+
+.basicInfo {
+  margin-left: 30px;
+}
+
+.basicInfo > div {
+  margin-top: 5px;
+}
+
+.overview {
+  margin-top: 15px;
+}
+
+.videoLink {
+  margin-top: 10px !important;
+  color:blue;
+}
+
+.videoLink a:hover {
+  text-decoration: underline;
+}
