@@ -1,0 +1,29 @@
+.container {
+  margin: 0 auto;
+  width: 100%;
+  cursor: pointer;
+}
+
+.title {
+  margin-top: 10px;
+}
+
+.voteAvg {
+  margin-top: 5px;
+}
+
+.voteCnt {
+  margin-top: 2px;
+}
+
+.imgTmp {
+  border: 1px solid grey;
+  height: 300px;
+  width: 100%;
+}
+
+@media (max-width: 550px) {
+  .container {
+    text-align: center;
+  }
+}
