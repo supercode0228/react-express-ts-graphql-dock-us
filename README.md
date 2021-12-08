@@ -20,6 +20,16 @@
 - express
 - apollo-server-express
 
+## Environment set up
+You should setup the .env file in server directory.
+NODE_ENV=development
+
+PORT=5000
+SERVER_URL=http://127.0.0.1:5000
+CLIENT_URL=http://localhost:3000
+TMD_URL=https://api.themoviedb.org/3
+TMD_KEY=YOUR KEY
+
 ## Documentation
 
 Check out the [official Apollo Server documentation](https://www.apollographql.com/docs/apollo-server/v2/) for more information.
