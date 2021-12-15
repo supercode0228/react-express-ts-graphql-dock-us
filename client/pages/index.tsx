@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { debounce } from 'lodash';
 import { useQuery } from '@apollo/client';
 
 import withApollo from '../lib/withApollo';
@@ -19,11 +20,11 @@ function Home(): JSX.Element {
     setPage(page + 1);
   };
 
-  const handleSearch = (e) => {
+  const handleSearch = debounce( (e) => {
     setSearchQuery(e.target.value);
     setPage(1);
     setMovies([]);
-  }
+  }, 1000);
 
   useEffect(() => {
     if (data) {
@@ -37,7 +38,7 @@ function Home(): JSX.Element {
   return (
     <div className={styles.container}>
       <h1 className="text-center">Popular Movie List</h1>
-      <SearchInput query={searchQuery} onChange={handleSearch} />
+      <SearchInput onChange={handleSearch} />
       <main className={styles.main}>
         {!loading && movies.length === 0 && data.movies.total_pages === 0 && (
           <h2>Not Found Movies</h2>
